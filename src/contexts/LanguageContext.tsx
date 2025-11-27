@@ -58,7 +58,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
   }, [language]);
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     const keys = key.split(".");
     let value: any = translations;
 
@@ -70,8 +70,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    return typeof value === "string" ? value : key;
+    return value; // Return the actual value (string, object, array, etc.)
   };
+
+
 
   const dir = language === "ar" ? "rtl" : "ltr";
 

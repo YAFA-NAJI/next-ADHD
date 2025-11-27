@@ -40,12 +40,12 @@
   },
   "howItWorks": {
     "hero": {
-      "defaultTitle": "By people with ADHD; for people with ADHD",
-      "defaultSubtitle": "Developed by leading ADHD experts, MindBoost's rich programs are based on cognitive behavioral therapy (CBT) principles."
+      "title": "By people with ADHD; for people with ADHD",
+      "subtitle": "Developed by leading ADHD experts, MindBoost's rich programs are based on cognitive behavioral therapy (CBT) principles."
     },
     "learn": {
-      "learnTitle": "Learn something new every day.",
-      "learnDescription": "Our science-based program is at the heart of MindBoost, proven to help ADHDers regain control. We’ll help you learn how ADHD specifically impacts your unique lifestyle and better understand how your ADHD brain works.",
+      "title": "Learn something new every day.",
+      "description": "Our science-based program is at the heart of MindBoost, proven to help ADHDers regain control. We'll help you learn how ADHD specifically impacts your unique lifestyle and better understand how your ADHD brain works.",
       "modules": [
         {
           "label": "Module 1",
@@ -66,9 +66,49 @@
       ]
     },
     "connect": {
-      "defaultTitle": "Connect with people who get it.",
-      "defaultSubtitle": "You're not alone. Find your place in our virtual, in-app community, and draw strength from people going through similar challenges.",
-      "anotherSubtitle": "Members can also join any of our live events with qualified ADHD experts to get their burning ADHD questions answered. We're here to help you simplify life by seeing what works for you—and what doesn't."
+      "title": "Connect with people who get it.",
+      "subtitle1": "You're not alone. Find your place in our virtual, in-app community, and draw strength from people going through similar challenges.",
+      "subtitle2": "Members can also join any of our live events with qualified ADHD experts to get their burning ADHD questions answered. We're here to help you simplify life by seeing what works for you—and what doesn't."
+    },
+    "testimonials": {
+      "title": "But don't just take our word for it!",
+      "items": [
+        {
+          "name": "Jade",
+          "age": "34 years old",
+          "quote": "Before MindBoost, I honestly thought I was beyond help and that there just weren't any ADHD-specific strategies out there that would work for me. **This app has already given me so much hope** that I have lost over the years."
+        },
+        {
+          "name": "Ari",
+          "age": "29 years old",
+          "quote": "My partner says she's noticed the new effort I'm putting in, and has seen an **increased level of consistency**, as well as the beginnings of a **more organized routine**. The positivity that my daily use of the MindBoost app is giving us has made a big (and very important) change in our relationship."
+        },
+        {
+          "name": "Elane",
+          "age": "44 years old",
+          "quote": "MindBoost is **brilliant**. Yes, I did question the initial price, but you get so much for it! It's **well thought out, well-built, and cheaper than therapy!**"
+        }
+      ]
+    },
+    "ready": {
+      "title": "Ready to reach your full potential?",
+      "description": "Take our quiz to see how MindBoost can help you on your ADHD journey, too!",
+      "statistic": "of MindBoost users have reported benefits of using the app daily.",
+      "buttonText": "Take the quiz"
+    }
+  },
+  "aboutUs": {
+    "ourStory": {
+      "title": "Our story",
+      "description1": "At MindBoost, we understand the challenges of ADHD firsthand—which is why our team of clinicians and coaches, many of whom also live with ADHD, created an affordable and accessible solution to help people with ADHD thrive.",
+      "description2": "Our ADHD app offers personalized coaching, strategies, and knowledge to help you achieve your goals. Discover how Inflow can support you in taking back control and living your best life."
+    },
+    "ourMission":{
+      "title":"Our Mission",
+      "description1Before":"At MindBoost, we believe that neurodiverse individuals deserve quality care that's convenient, affordable, and effective. That's why we offer a dynamic,",
+      "middle":"science-based program",
+      "description1After":"designed with accessible support.",
+      "description2":"Our program gives members a better understanding of themselves, coaching and functional tools, and practical strategies for managing ADHD. In addition, the Inflow app offers a safe, stigma-free, and accepting community where our members are encouraged to thrive. So join us and experience the benefits of our program today!"
     }
   }
 }

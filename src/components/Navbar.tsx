@@ -51,7 +51,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/about-us"
                 className="text-primary hover:bg-secondary hover:text-brand transition-colors"
               >
                 {t("nav.aboutUs")}
@@ -112,7 +112,7 @@ function Navbar() {
           </li>
           <li>
             <Link
-              href="/about"
+              href="/about-us"
               className="text-primary hover:bg-secondary hover:text-brand transition-colors rounded-lg"
             >
               {t("nav.aboutUs")}

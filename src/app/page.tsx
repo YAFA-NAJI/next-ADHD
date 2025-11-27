@@ -7,7 +7,7 @@ import CountUp from 'react-countup';
 import {
   Brain, Users, Sparkles, TestTube2, BookOpen, Mic, MessageSquareQuote, HeartHandshake
 } from 'lucide-react';
-import About from '../components/About'; // قسم About
+// import About from '../components/About'; // قسم About
 
 // بطاقة للمقالات أو البودكاست
 const ContentCard = ({ type, title, author, href, icon }: { type: string, title: string, author: string, href: string, icon: React.ReactNode }) => (
@@ -117,10 +117,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section
       <section id="about">
         <About />
-      </section>
+      </section> */}
 
       {/* Latest Content Section */}
       <section className="py-20 bg-background dark:bg-background-dark">
