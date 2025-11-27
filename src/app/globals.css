@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Light Theme (Default) */
+:root {
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-card: #FAFBFC;
+
+  /* Text Colors */
+  --text-primary: #2C3E50;
+  --text-secondary: #5A6C7D;
+  --text-muted: #95A5A6;
+
+  /* Brand Colors */
+  --brand-primary: #667EEA;
+  --brand-secondary: #764BA2;
+
+  /* Link Colors */
+  --link-default: #667EEA;
+  --link-hover: #5568D3;
+  --link-visited: #8B76C4;
+
+  /* Status Colors */
+  --success: #4CAF50;
+  --warning: #FFB74D;
+  --error: #EF5350;
+  --info: #64B5F6;
+}
+
+/* Dark Theme */
+.dark {
+  /* Background Colors */
+  --bg-primary: #1A1D23;
+  --bg-secondary: #252932;
+  --bg-card: #2D3139;
+
+  /* Text Colors */
+  --text-primary: #E8EAED;
+  --text-secondary: #B8BABF;
+  --text-muted: #7A7D85;
+
+  /* Brand Colors */
+  --brand-primary: #7B90FF;
+  --brand-secondary: #9B7BC6;
+
+  /* Link Colors */
+  --link-default: #8B9CFF;
+  --link-hover: #A5B3FF;
+  --link-visited: #B39DDB;
+
+  /* Status Colors */
+  --success: #66BB6A;
+  --warning: #FFA726;
+  --error: #EF5350;
+  --info: #42A5F5;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+/* Arabic Font Support */
+[dir="rtl"] body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* Utility Classes for Easy Use */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-brand {
+  color: var(--brand-primary);
+}
+
+.bg-brand {
+  background-color: var(--brand-primary);
+}
+
+.link {
+  color: var(--link-default);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--link-hover);
+}
+
+.link:visited {
+  color: var(--link-visited);
+}

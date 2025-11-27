@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "aboutUs": "About us",
+    "adhdBlog": "ADHD Blog",
+    "forClinicians": "For clinicians",
+    "logIn": "Log in",
+    "takeTheQuiz": "Take The Quiz"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "services": "Services",
+    "faqs": "FAQs",
+    "accessProgram": "Access program",
+    "login": "Login",
+    "mindBoost": "MindBoost",
+    "howItWorks": "How it works",
+    "aboutUs": "About us",
+    "careers": "Careers",
+    "forClinicians": "For clinicians",
+    "forEmployers": "For employers & educators",
+    "adhdBlog": "ADHD blog",
+    "testimonials": "Testimonials",
+    "social": "Social",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "contact": "Contact",
+    "address": "1209 Orange Street, Palestine, DE 19801",
+    "privacyPolicy": "Privacy policy",
+    "termsAndConditions": "Terms and Conditions",
+    "postingPolicy": "Posting policy",
+    "copyright": "Copyright © {year} - All right reserved by MindBoost"
+  },
+  "howItWorks": {
+    "hero": {
+      "defaultTitle": "By people with ADHD; for people with ADHD",
+      "defaultSubtitle": "Developed by leading ADHD experts, MindBoost's rich programs are based on cognitive behavioral therapy (CBT) principles."
+    },
+    "learn": {
+      "learnTitle": "Learn something new every day.",
+      "learnDescription": "Our science-based program is at the heart of MindBoost, proven to help ADHDers regain control. We’ll help you learn how ADHD specifically impacts your unique lifestyle and better understand how your ADHD brain works.",
+      "modules": [
+        {
+          "label": "Module 1",
+          "title": "Anxiety"
+        },
+        {
+          "label": "Module 2",
+          "title": "Procrastination"
+        },
+        {
+          "label": "Module 3",
+          "title": "Impulsivity"
+        },
+        {
+          "label": "Module 4",
+          "title": "Avoidance"
+        }
+      ]
+    },
+    "connect": {
+      "defaultTitle": "Connect with people who get it.",
+      "defaultSubtitle": "You're not alone. Find your place in our virtual, in-app community, and draw strength from people going through similar challenges.",
+      "anotherSubtitle": "Members can also join any of our live events with qualified ADHD experts to get their burning ADHD questions answered. We're here to help you simplify life by seeing what works for you—and what doesn't."
+    }
+  }
+}
