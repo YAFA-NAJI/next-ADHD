@@ -1,11 +1,47 @@
 {
   "nav": {
+    "home": "Home",
     "howItWorks": "How it works",
     "aboutUs": "About us",
     "adhdBlog": "ADHD Blog",
     "forClinicians": "For clinicians",
     "logIn": "Log in",
-    "takeTheQuiz": "Take The Quiz"
+    "logOut": "Log out",
+    "profile": "Profile",
+    "takeTheQuiz": "Take the Quiz"
+  },
+  "home": {
+    "heroTitle": "Embrace Your ADHD Superpower",
+    "heroSubtitle": "MindBoost empowers you to understand your brain, harness your creativity, and thrive in everyday life with confidence.",
+    "ctaTest": "Take the ADHD Test",
+    "ctaCommunity": "Join Community",
+    "ctaStories": "Success Stories"
+  },
+  "hero": {
+    "title": "Discover Your ADHD Brain Power",
+    "description": "MindBoost helps you understand your brain, leverage your creativity, and succeed confidently in daily life.",
+    "takeTest": "Take the ADHD Test",
+    "joinCommunity": "Join Community",
+    "successStories": "Success Stories"
+  },
+  "whyChoose": {
+    "title": "Why Choose MindBoost?",
+    "subtitle": "Designed specifically for ADHD brains to help you succeed",
+    "understandBrain": "Understand Your Brain",
+    "understandBrainDesc": "Learn how your ADHD brain works and leverage your unique strengths",
+    "unlockCreativity": "Unlock Creativity",
+    "unlockCreativityDesc": "Harness hyperfocus and creative thinking for amazing results",
+    "joinCommunity": "Join Our Community",
+    "joinCommunityDesc": "Connect with thousands who understand your journey",
+    "getSupport": "Get Support",
+    "getSupportDesc": "Access expert resources and peer support whenever you need it"
+  },
+  "stats": {
+    "title": "The ADHD Advantage",
+    "subtitle": "Discover what makes ADHD minds exceptional",
+    "stat1": "More likely to be entrepreneurs.",
+    "stat2": "Report high levels of creativity.",
+    "stat3": "Excel in crisis situations."
   },
   "common": {
     "welcome": "Welcome",
@@ -23,7 +59,7 @@
     "careers": "Careers",
     "forClinicians": "For clinicians",
     "forEmployers": "For employers & educators",
-    "adhdBlog": "ADHD blog",
+    "adhdBlog": "ADHD Blog",
     "testimonials": "Testimonials",
     "social": "Social",
     "facebook": "Facebook",
@@ -33,10 +69,10 @@
     "tiktok": "TikTok",
     "contact": "Contact",
     "address": "1209 Orange Street, Palestine, DE 19801",
-    "privacyPolicy": "Privacy policy",
+    "privacyPolicy": "Privacy Policy",
     "termsAndConditions": "Terms and Conditions",
-    "postingPolicy": "Posting policy",
-    "copyright": "Copyright © {year} - All right reserved by MindBoost"
+    "postingPolicy": "Posting Policy",
+    "copyright": "Copyright © {year} - All rights reserved by MindBoost"
   },
   "howItWorks": {
     "hero": {
@@ -47,22 +83,10 @@
       "title": "Learn something new every day.",
       "description": "Our science-based program is at the heart of MindBoost, proven to help ADHDers regain control. We'll help you learn how ADHD specifically impacts your unique lifestyle and better understand how your ADHD brain works.",
       "modules": [
-        {
-          "label": "Module 1",
-          "title": "Anxiety"
-        },
-        {
-          "label": "Module 2",
-          "title": "Procrastination"
-        },
-        {
-          "label": "Module 3",
-          "title": "Impulsivity"
-        },
-        {
-          "label": "Module 4",
-          "title": "Avoidance"
-        }
+        { "label": "Module 1", "title": "Anxiety" },
+        { "label": "Module 2", "title": "Procrastination" },
+        { "label": "Module 3", "title": "Impulsivity" },
+        { "label": "Module 4", "title": "Avoidance" }
       ]
     },
     "connect": {
@@ -73,21 +97,9 @@
     "testimonials": {
       "title": "But don't just take our word for it!",
       "items": [
-        {
-          "name": "Jade",
-          "age": "34 years old",
-          "quote": "Before MindBoost, I honestly thought I was beyond help and that there just weren't any ADHD-specific strategies out there that would work for me. **This app has already given me so much hope** that I have lost over the years."
-        },
-        {
-          "name": "Ari",
-          "age": "29 years old",
-          "quote": "My partner says she's noticed the new effort I'm putting in, and has seen an **increased level of consistency**, as well as the beginnings of a **more organized routine**. The positivity that my daily use of the MindBoost app is giving us has made a big (and very important) change in our relationship."
-        },
-        {
-          "name": "Elane",
-          "age": "44 years old",
-          "quote": "MindBoost is **brilliant**. Yes, I did question the initial price, but you get so much for it! It's **well thought out, well-built, and cheaper than therapy!**"
-        }
+        { "name": "Jade", "age": "34 years old", "quote": "Before MindBoost, I honestly thought I was beyond help and that there just weren't any ADHD-specific strategies out there that would work for me. **This app has already given me so much hope** that I have lost over the years." },
+        { "name": "Ari", "age": "29 years old", "quote": "My partner says she's noticed the new effort I'm putting in, and has seen an **increased level of consistency**, as well as the beginnings of a **more organized routine**. The positivity that my daily use of the MindBoost app is giving us has made a big (and very important) change in our relationship." },
+        { "name": "Elane", "age": "44 years old", "quote": "MindBoost is **brilliant**. Yes, I did question the initial price, but you get so much for it! It's **well thought out, well-built, and cheaper than therapy!**" }
       ]
     },
     "ready": {
@@ -101,14 +113,137 @@
     "ourStory": {
       "title": "Our story",
       "description1": "At MindBoost, we understand the challenges of ADHD firsthand—which is why our team of clinicians and coaches, many of whom also live with ADHD, created an affordable and accessible solution to help people with ADHD thrive.",
-      "description2": "Our ADHD app offers personalized coaching, strategies, and knowledge to help you achieve your goals. Discover how Inflow can support you in taking back control and living your best life."
+      "description2": "Our ADHD app offers personalized coaching, strategies, and knowledge to help you achieve your goals. Discover how MindBoost can support you in taking back control and living your best life."
     },
-    "ourMission":{
-      "title":"Our Mission",
-      "description1Before":"At MindBoost, we believe that neurodiverse individuals deserve quality care that's convenient, affordable, and effective. That's why we offer a dynamic,",
-      "middle":"science-based program",
-      "description1After":"designed with accessible support.",
-      "description2":"Our program gives members a better understanding of themselves, coaching and functional tools, and practical strategies for managing ADHD. In addition, the Inflow app offers a safe, stigma-free, and accepting community where our members are encouraged to thrive. So join us and experience the benefits of our program today!"
+    "ourMission": {
+      "title": "Our Mission",
+      "description1Before": "At MindBoost, we believe that neurodiverse individuals deserve quality care that's convenient, affordable, and effective. That's why we offer a dynamic,",
+      "middle": "science-based program",
+      "description1After": "designed with accessible support.",
+      "description2": "Our program gives members a better understanding of themselves, coaching and functional tools, and practical strategies for managing ADHD. In addition, the MindBoost app offers a safe, stigma-free, and accepting community where our members are encouraged to thrive. So join us and experience the benefits of our program today!"
+    }
+  },
+      "community": {
+    "headerTitle": "Welcome to the MindBoost Community",
+    "headerSubtitle": "Connect, share, and learn from others in our supportive community.",
+    "newPostTitle": "Create a new post",
+    "newPostContent": "Write your post content here...",
+    "categoryTips": "Tips",
+    "categorySupport": "Support & Advice",
+    "tabAll": "All",
+    "tabTips": "Tips",
+    "tabSupport": "Support",
+    "reply": "Reply...",
+    "addComment": "Add a comment...",
+    "post": "Post",
+    "upcomingEvents": "Upcoming Events",
+    "authors": {
+      "sarah": "Sarah Mohammad",
+      "ahmad": "Ahmad Ali",
+      "you": "You"
+    },
+    "roles": {
+      "coach": "ADHD Coach",
+      "member": "Member"
+    },
+    "categories": {
+      "tips": "Tips",
+      "support": "Support"
+    },
+    "commenters": {
+      "alice": "Alice",
+      "bob": "Bob",
+      "emma": "Emma",
+      "sarah": "Sarah"
+    },
+    "comments": {
+      "tipsMorning": {
+        "alice": "Great tips!",
+        "sarahReply": "Thanks Alice!",
+        "bob": "Very helpful, thanks!"
+      },
+      "feelingOverwhelmed": {
+        "emma": "Take it one day at a time.",
+        "sarah": "Reach out to a coach or support group."
+      }
+    },
+    "posts": {
+      "tipsMorning": {
+        "title": "Morning Tips",
+        "content": "Start your day positively with these simple tips."
+      },
+      "feelingOverwhelmed": {
+        "title": "Feeling Overwhelmed",
+        "content": "Tips to help you manage your feelings and organize your day."
+      }
+    },
+    "events": {
+      "supportGroupMeeting": {
+        "title": "Support Group Meeting",
+        "date": "2025-12-10",
+        "time": "18:00",
+        "location": "Online via Zoom",
+        "join": "Join",
+        "joined": "Joined"
+      },
+      "mindfulnessWorkshop": {
+        "title": "Mindfulness Workshop",
+        "date": "2025-12-15",
+        "time": "16:00",
+        "location": "Community Center, Room 5",
+        "join": "Join",
+        "joined": "Joined"
+      },
+      "parentCoachWebinar": {
+        "title": "Parent Coaching Webinar",
+        "date": "2025-12-20",
+        "time": "19:00",
+        "location": "Online",
+        "join": "Join",
+        "joined": "Joined"
+      }
+    }
+  
+  
+  },
+  "successStories": {
+    "title": "Success Stories & Growth",
+    "subtitle": "Listen to inspiring experiences of other people. Every story is a testament to strength, persistence, and continuous improvement.",
+    "filterLabel": "Choose the category you are interested in:",
+    "all": "All",
+    "yearsOld": "years",
+    "shareYourStory": "Share your story",
+    "shareButton": "Share your story",
+    "readFull": "Read full story",
+    "hideFull": "Hide story",
+    "formTitle": "Share Your Story",
+      "date": "Date",
+    "form": {
+      "name": "Name",
+      "age": "Age",
+      "story": "Your story",
+      "improvement": "Improvement",
+      "category": "Category",
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "categories": {
+      "focus": "Focus",
+      "emotion": "Mental Health",
+      "social": "Social Skills",
+      "academic": "Academic Performance"
+    },
+    "sample1": {
+      "story": "Mohammed learned how to focus on his daily tasks and reduced procrastination.",
+      "improvement": "Improved focus and increased productivity."
+    },
+    "sample2": {
+      "story": "Fatima developed strategies to manage her emotions better.",
+      "improvement": "Improved emotional balance and increased self-confidence."
+    },
+    "sample3": {
+      "story": "Ali started interacting socially in a more effective way with his peers.",
+      "improvement": "Improved social skills and stronger relationships."
     }
   }
 }

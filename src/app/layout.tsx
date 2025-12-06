@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+//Layout.tsx
 import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "../contexts/AuthContext"; 
 import { Providers } from "@/components/Providers";
 
 const geistSans = Geist({
@@ -18,22 +19,17 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "MindBoost - Understand ADHD",
-  description: "A platform to learn about and manage ADHD.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased bg-primary text-primary`}
       >
-        <Providers>{children}</Providers>
+        <AuthProvider>
+          <Providers>
+            {children}
+          </Providers>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/utils/supabaseClient"; 
 import Link from "next/link";
 
 const SignUpPage: React.FC = () => {
@@ -9,20 +10,49 @@ const SignUpPage: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSignUp = (e: React.FormEvent) => {
+  const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
     }
-    alert("Account created successfully!");
-    router.push("/login");
+
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: name,
+          },
+        },
+      });
+
+      if (error) {
+        alert(`Error: ${error.message}`);
+      } else {
+        alert("Account created successfully! Please check your email to confirm.");
+        router.push("/login");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background-light">
-      <form className="bg-surface-light p-8 rounded shadow-md w-full max-w-sm" onSubmit={handleSignUp}>
+      <form
+        className="bg-surface-light p-8 rounded shadow-md w-full max-w-sm"
+        onSubmit={handleSignUp}
+      >
         <h1 className="text-2xl font-bold mb-6 text-center text-secondary">
           Sign Up
         </h1>
@@ -61,8 +91,9 @@ const SignUpPage: React.FC = () => {
         <button
           type="submit"
           className="w-full bg-secondary text-background-light p-2 rounded hover:bg-secondary-dark transition"
+          disabled={loading}
         >
-          Create Account
+          {loading ? "Creating..." : "Create Account"}
         </button>
         <p className="text-text-secondary mt-4 text-center">
           Already have an account?{" "}
