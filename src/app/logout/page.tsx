@@ -2,20 +2,18 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/utils/supabaseClient";
 
 export default function LogoutPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // إزالة أي توكن موجود في التخزين المحلي
-    localStorage.removeItem("token");
-    // إعادة التوجيه إلى صفحة الدخول أو الرئيسية
-    router.push("/login"); 
+    const signOut = async () => {
+      await supabase.auth.signOut();
+      router.push("/login");
+    };
+    signOut();
   }, [router]);
 
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <p className="text-lg font-semibold">Logging out...</p>
-    </div>
-  );
+  return <p>Signing out...</p>;
 }

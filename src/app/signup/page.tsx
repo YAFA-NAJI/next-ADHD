@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-<<<<<<< HEAD
 import { supabase } from "@/utils/supabaseClient"; 
-=======
->>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
 import Link from "next/link";
 
 const SignUpPage: React.FC = () => {
@@ -13,22 +10,15 @@ const SignUpPage: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
 
-=======
-
-  const handleSignUp = (e: React.FormEvent) => {
-    e.preventDefault();
->>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
     }
-<<<<<<< HEAD
 
     setLoading(true);
 
@@ -55,22 +45,14 @@ const SignUpPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
-=======
-    alert("Account created successfully!");
-    router.push("/login");
->>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
   };
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background-light">
-<<<<<<< HEAD
       <form
         className="bg-surface-light p-8 rounded shadow-md w-full max-w-sm"
         onSubmit={handleSignUp}
       >
-=======
-      <form className="bg-surface-light p-8 rounded shadow-md w-full max-w-sm" onSubmit={handleSignUp}>
->>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
         <h1 className="text-2xl font-bold mb-6 text-center text-secondary">
           Sign Up
         </h1>
@@ -109,14 +91,9 @@ const SignUpPage: React.FC = () => {
         <button
           type="submit"
           className="w-full bg-secondary text-background-light p-2 rounded hover:bg-secondary-dark transition"
-<<<<<<< HEAD
           disabled={loading}
         >
           {loading ? "Creating..." : "Create Account"}
-=======
-        >
-          Create Account
->>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
         </button>
         <p className="text-text-secondary mt-4 text-center">
           Already have an account?{" "}

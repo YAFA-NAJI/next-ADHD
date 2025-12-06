@@ -442,7 +442,7 @@ export default function ADHDTestPage() {
   };
 
   const calculateScore = () => {
-    return answers.reduce((sum, answer) => sum + (answer !== null ? answer : 0), 0);
+    return answers.reduce<number>((sum, answer) => sum + (answer ?? 0), 0);
   };
 
   const handleRestart = () => {

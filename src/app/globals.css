@@ -130,3 +130,10 @@ body {
 .link:visited {
   color: var(--link-visited);
 }
+
+.bg-login {
+  background-image: url("/images/loginn.jpg");
+  background-size: cover;
+  background-position: center;
+}
+

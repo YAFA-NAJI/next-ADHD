@@ -101,24 +101,35 @@ const PostCard = ({
   const addComment = () => {
     if (!newComment.trim()) return;
     const id = comments.length ? comments[comments.length - 1].id + 1 : 1;
-    const updatedComments = [...comments, { id, user: 'You', text: newComment, replies: [] }];
+const updatedComments = [
+  ...comments, 
+  { id, userKey: 'community.authors.you', textKey: newComment, replies: [] } 
+];
+
     setComments(updatedComments);
     updatePost({ ...post, comments: updatedComments });
     setNewComment('');
   };
 
   const addReply = (commentId: number, replyText: string) => {
-    if (!replyText.trim()) return;
-    const updatedComments = comments.map(c => {
-      if (c.id === commentId) {
-        const newReplyId = c.replies.length ? c.replies[c.replies.length - 1].id + 1 : 1;
-        return { ...c, replies: [...c.replies, { id: newReplyId, user: 'You', text: replyText }] };
-      }
-      return c;
-    });
-    setComments(updatedComments);
-    updatePost({ ...post, comments: updatedComments });
-  };
+  if (!replyText.trim()) return;
+  const updatedComments = comments.map(c => {
+    if (c.id === commentId) {
+      const newReplyId = c.replies.length ? c.replies[c.replies.length - 1].id + 1 : 1;
+      return { 
+        ...c, 
+        replies: [
+          ...c.replies, 
+          { id: newReplyId, userKey: 'community.authors.you', textKey: replyText } 
+        ] 
+      };
+    }
+    return c;
+  });
+  setComments(updatedComments);
+  updatePost({ ...post, comments: updatedComments });
+};
+
 
   const saveEdit = () => {
     updatePost({ ...post, titleKey: editedTitle, contentKey: editedContent });
@@ -173,15 +184,17 @@ const PostCard = ({
      {comments.map(c => (
   <div key={c.id} className="space-y-1">
     <div className="text-gray-700 text-sm">
-      <span className="font-semibold">{c.userKey ? t(c.userKey) : c.user}:</span> {c.textKey ? t(c.textKey) : c.text}
+      <span className="font-semibold">{t(c.userKey)}:</span> {t(c.textKey)}
+
     </div>
-    {c.replies.map(r => (
-      <div key={r.id} className="ml-6 text-gray-600 text-sm flex items-center justify-between">
-        <span>
-          <span className="font-semibold">{r.userKey ? t(r.userKey) : r.user}:</span> {r.textKey ? t(r.textKey) : r.text}
-        </span>
-      </div>
-    ))}
+  {c.replies.map(r => (
+  <div key={r.id} className="ml-6 text-gray-600 text-sm flex items-center justify-between">
+    <span>
+      <span className="font-semibold">{t(r.userKey)}:</span> {t(r.textKey)}
+    </span>
+  </div>
+))}
+
     <ReplyInput onReply={(text) => addReply(c.id, text)} placeholder={t('community.reply')} />
   </div>
 ))}
@@ -205,9 +218,32 @@ const PostCard = ({
 };
 
 // مكوّن بطاقة الحدث
-const EventCard = ({ event, t }: { event: { titleKey: string, date: string, time: string, location: string }, t: (key: string) => string }) => {
+const EventCard = ({ event, t }: { event: { titleKey: string, date: string, time: string, location: string }, t: (key: string) => any }) => {
   const [joined, setJoined] = useState(false);
-  const eventObj = t(event.titleKey, { returnObjects: true }) as { title: string; date: string; time: string; location: string; join: string; joined: string };
+  
+  // 🟢 التعديل هنا: استدعاء t بدون argument ثاني للحصول على الكائن مباشرة
+  const eventObjRaw = t(event.titleKey);
+
+  // 🟢 التعديل هنا: بما أن t تعيد الكائن مباشرة، نستخدمه كما هو
+  let eventObj: { title: string; date: string; time: string; location: string; join: string; joined: string };
+
+  // 🟢 التعديل هنا: التحقق مما إذا كانت القيمة المعادة هي كائن (وهو المتوقع)
+  if (typeof eventObjRaw === 'object' && eventObjRaw !== null) {
+      eventObj = eventObjRaw;
+  } else {
+      // في حال كانت سلسلة نصية أو غير متوقعة، نستخدم قيمة افتراضية
+      eventObj = { 
+          title: String(eventObjRaw), 
+          date: event.date, 
+          time: event.time, 
+          location: event.location, 
+          join: 'Join', 
+          joined: 'Joined' 
+      };
+  }
+  
+  // ❌ تم حذف محاولة JSON.parse غير الضرورية والتي كانت تسبب الخطأ في حال كانت t تعيد الكائن مباشرة.
+
   return (
     <div className="bg-white rounded-xl shadow-sm p-4 flex flex-col gap-2 hover:shadow-lg transition-all duration-300">
       <h4 className="font-semibold">{eventObj.title}</h4>
@@ -272,8 +308,8 @@ export default function CommunityPage() {
         {/* New Post */}
         <section className="max-w-5xl mx-auto mb-8 space-y-2">
           <input type="text" placeholder={t('community.newPostTitle')} value={newPostTitle} onChange={(e) => setNewPostTitle(e.target.value)} className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-          <textarea placeholder={t('community.newPostContent')} value={newPostContent} onChange={(e) => setNewPostContent(e.target.value)} className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-          <select value={newPostCategory} onChange={(e) => setNewPostCategory(e.target.value)} className="w-full p-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <textarea placeholder={t('community.newPostContent')} value={newPostContent} onChange={(e) => setNewPostContent(e.target.value)} className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" rows={4} />
+          <select value={newPostCategory} onChange={(e) => setNewPostCategory(e.target.value)} className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
             <option value="community.categories.tips">{t('community.categoryTips')}</option>
             <option value="community.categories.support">{t('community.categorySupport')}</option>
           </select>
