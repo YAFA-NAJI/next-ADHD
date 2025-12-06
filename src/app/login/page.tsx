@@ -2,12 +2,16 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+<<<<<<< HEAD
 import { supabase } from "@/utils/supabaseClient"; // تأكد أن المسار صحيح
+=======
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
 
 const LoginPage: React.FC = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,6 +32,17 @@ const LoginPage: React.FC = () => {
     } else {
       // نجاح تسجيل الدخول
       router.push("/"); // أو أي صفحة تريد إعادة التوجيه إليها بعد تسجيل الدخول
+=======
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    // مثال مؤقت لتسجيل الدخول
+    if (email === "user@example.com" && password === "123456") {
+      alert("Login successful!");
+      router.push("/");
+    } else {
+      alert("Invalid credentials");
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
     }
   };
 
@@ -38,6 +53,7 @@ const LoginPage: React.FC = () => {
         backgroundImage: "url('/images/login-bg.jpg')",
       }}
     >
+<<<<<<< HEAD
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
@@ -46,14 +62,24 @@ const LoginPage: React.FC = () => {
         onSubmit={handleLogin}
         className="relative z-10 bg-white bg-opacity-90 p-10 rounded-2xl shadow-lg w-full max-w-md flex flex-col items-center"
       >
+=======
+      {/* Overlay لتسهيل قراءة النصوص */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      {/* Form */}
+      <form className="relative z-10 bg-white bg-opacity-90 p-10 rounded-2xl shadow-lg w-full max-w-md flex flex-col items-center">
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
         <h1 className="text-3xl font-bold mb-6 text-primary text-center">
           Welcome Back
         </h1>
 
+<<<<<<< HEAD
         {error && (
           <p className="text-red-600 mb-4 text-center font-semibold">{error}</p>
         )}
 
+=======
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
         <input
           type="email"
           placeholder="Email"
@@ -73,10 +99,16 @@ const LoginPage: React.FC = () => {
 
         <button
           type="submit"
+<<<<<<< HEAD
           disabled={loading}
           className="w-full bg-primary text-white p-3 rounded-lg font-semibold hover:bg-primary-dark transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? "Logging in..." : "Login"}
+=======
+          className="w-full bg-primary text-white p-3 rounded-lg font-semibold hover:bg-primary-dark transition"
+        >
+          Login
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
         </button>
 
         <p className="text-text-secondary mt-4 text-center">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/app/context/AuthContext.tsx
 
 "use client";
@@ -80,3 +81,24 @@ export function useAuth() {
   }
   return context;
 }
+=======
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+export default function LogoutPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    localStorage.removeItem("token");
+    router.push("/"); 
+  }, [router]);
+
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <p className="text-lg font-semibold">Logging out...</p>
+    </div>
+  );
+}
+>>>>>>> 48f0b8939c07e93bfbbfa9709e465889d951542d
